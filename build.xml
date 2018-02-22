@@ -1,0 +1,20 @@
+<project name="test" default="JavaTest">
+
+  <target name="JavaTest">
+     
+    <echo> Java related tasks </echo>
+	
+	<delete dir="build"/>
+    <mkdir dir="build/classes"/>
+	<javac srcdir="src" destdir="build/classes" />
+
+    <jar basedir="build/classes" destfile="build/jar/Helloworld.jar">
+        <manifest>
+            <attribute name="Main-Class" value="Hello"/>
+        </manifest>
+    </jar>  
+    
+	<java jar="build/jar/Helloworld.jar" fork='true'/>
+  </target>
+
+</project>
