@@ -1,3 +1,0 @@
-# git-hub
-practice repository
-change 1.2.3.....
